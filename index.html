@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BestellApp</title>
+
+        <script src="./scripts/db.js"></script>
+        <script src="./scripts/script.js"></script>
+        <script src="./scripts/template.js"></script>
+
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/assets.css">
+        <link rel="stylesheet" href="./styles/basket.css">
+        <link rel="stylesheet" href="./styles/standard.css">
+        <link rel="stylesheet" href="./styles/fonts.css">
+        <link rel="stylesheet" href="./styles/responsive.css">
+    </head>
+    <body onload="onload()">
+        <header class="main_header">
+            <a href="index.html" class="active"><img class="logo_image" src="./assets/images/logo.jpg" alt="logo"></a>
+            <div class="header links" id="myLinks">
+                <a href="#footer_slider">Über uns</a>
+                <a href="#footer_slider">Kontakt</a>
+
+            </div>
+            <a href="javascript:void(0);" class="icon_menu" onclick="burgerMenu()">
+                <i class="fa fa-bars"></i></a>
+
+        </header>
+        <section class="content_total">
+            <div class="content_restaurant">
+
+
+                <div class="logo_div">
+                    <div class="background-image">
+                        <img class="logo_image2" src="./assets/images/logo.jpg" alt="logo">
+                    </div>
+                </div>
+                <div class="content_rating">
+                    <br>
+                    <h1>FOOD FOOD </h1>
+                    <div class="rating">
+                        <h4>Bewertung (4.2 von 5 Sternen)</h4>
+                    </div>
+                    <div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <br>
+
+                </div>
+                <div class="restaurant_navbar">
+                    <img src="./assets/images/arrow.jpg" alt="">
+                    <a href="#main_food"><strong>Hauptgerichte</strong></a>
+
+                    <a href="#fingerfood"><strong>Beilagen</strong></a>
+
+                </div>
+                <br>
+                <img class="image_2" src="./assets/images/pizza.jpg" alt="">
+
+
+                <div class="restaurant_category">
+                    <h1>Hauptgerichte</h1>
+
+                    <div id="main_food"></div>
+
+                </div>
+                <img class="image_2" src="./assets/images/nuggets.jpg" alt="">
+
+
+
+                <div class="restaurant_category" id="fingerfood">
+                    <h1>Beilagen</h1>
+                </div>
+                <div class="coming">Coming soon...</div>
+                <div><button onclick="showBasket()" id="myBtn" class="basket_button"><i
+                            class="fas fa-shopping-cart shopp" style='color:#ffffff'></i></button></div>
+            </div>
+
+            <div class="basket_content" id="basket">
+
+                <div id="total_container" class="basket_sticky">
+
+
+                    <div class="basket_header">
+                        <div class="closeButton">
+
+                            <div class="mid_element">
+                                <i class="fas fa-shopping-cart shopp" style='color:#ff8800'></i>
+                            </div>
+                            <div class="right_element">
+                                <button onclick="closeBasket()">x</button>
+                            </div>
+
+                        </div>
+                        <h1>Warenkorb</h1>
+
+                        <div class="toggle-container">
+                            <label class="toggle">
+                                <input type="checkbox" onclick="handleToggle(); toggleColor()" id="toggleSwitch" />
+                                <span class="slider ">
+                                    <div class="text_content">
+                                        <div class="textDelivery" id="delivery"><i
+                                                class="fas fa-bicycle"></i><br><strong>Lieferung</strong></div>
+                                        <div class="textPickup" id="pickup"><i
+                                                class="fa fa-hand-lizard-o"></i><br><strong>Abholung</strong></div>
+                                    </div>
+                                </span>
+                            </label>
+
+                        </div>
+                        <br>
+                    </div>
+                    <div class="basket_div" id="basket_food">
+
+                    </div>
+                    <div id="endprice" class="basket_end">
+
+                        <div> Zwischensumme:<span id="subTotal">0</span></div>
+                        <div>Lieferkosten:<span id="costAmount">5,00 €</span> </div>
+                        <div><strong>Gesamt:</strong><strong><span id="endPrice">0.00 €</strong></div>
+                        <br>
+                        <button id="buy_button" onclick="orderComplete()">Bestellen</button>
+
+                    </div>
+                </div>
+            </div>
+            <div onclick="closeOrder()" class="complete" id="orderClosed">
+                <em>
+                    <h1>Bestellung erfolgreich !</h1>
+                </em>
+                <img src="./assets/images/accepted.jpg" alt="">
+                <h2>Vielen dank für deine Bestellung !</h2>
+            </div>
+        </section>
+        <footer class="footer" id="footer_slider">
+            <div class="contact">
+
+                <h3>Kontakt</h3>
+
+
+                FOOD FOOD GMBH <br>
+                AUF DER SONNENALLE 12 <br>
+                10315 Berlin<br>
+                <br>
+                +49176815485<br>
+                food.food@contact.de
+
+
+            </div class="impressum">
+
+            <div>
+                <h3>Impressum</h3>
+                <a href="./impressum.html" target="_blank">Impressum</a>
+            </div>
+
+            <div class="follow">
+
+                <h3>Folge uns</h3>
+                <a href="https://facebook.com" target="_blank">Facebook</a><br>
+                <a href="https://twitter.com" target="_blank">Twitter</a><br>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 FOOD FOOD. Alle Rechte vorbehalten.</p>
+            </div>
+            </div>
+        </footer>
+    </body>
+</html>

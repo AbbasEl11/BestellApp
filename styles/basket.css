@@ -1,0 +1,150 @@
+.basket_content {
+  display: none;
+  width: 300px;
+  flex-grow: 1;
+  border: solid 1px #ff8000;
+}
+
+.basket_sticky {
+  width: 100%;
+  height: 400px;
+  position: sticky;
+  top: 0;
+  border: none;
+  margin-bottom: 150%;
+}
+
+.basket_header {
+  text-align: center;
+  border-bottom: solid 1px;
+}
+
+.closeButton {
+  display: flex;
+}
+
+.mid_element {
+  display: none;
+}
+
+.closeButton button {
+  height: 1.5em;
+  width: 2em;
+  font-size: 20px;
+  border-style: none;
+  color: #ff8000;
+  background-color: white;
+}
+.closeButton button:hover {
+  cursor: pointer;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.basket_div {
+  overflow-y: auto;
+}
+
+.basket_start {
+  margin: 10px;
+  flex-grow: 1;
+}
+
+.quantity_container {
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  justify-content: space-between;
+}
+
+.quantity_container button {
+  height: 1.5em;
+  width: 2em;
+  font-size: 20px;
+  border-style: none;
+  color: #ff8000;
+  background-color: white;
+}
+
+.quantity_container button:hover {
+  cursor: pointer;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.quantity_container input {
+  width: 1.5em;
+  height: 1em;
+  border: none;
+  text-align: center;
+  color: #ff8000;
+  margin: 0;
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+.price_container button {
+  height: 1.5em;
+  width: 2em;
+  border-style: none;
+  color: #ff8000;
+  background-color: white;
+  margin-left: 20px;
+  margin-bottom: 4px;
+}
+
+.price_container strong {
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+.basket_end {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-left: 10px;
+  line-height: 23px;
+  margin-right: 10px;
+}
+
+.basket_end div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.basket_end button {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(
+    45deg,
+    #ff512f 0%,
+    #f09819 51%,
+    #ff512f 100%
+  );
+}
+
+.basket_end button:hover {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}

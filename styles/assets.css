@@ -1,0 +1,50 @@
+.logo_image {
+  border-radius: 50%;
+  width: 150px;
+}
+
+.images_food {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+}
+
+.checked {
+  color: orange;
+}
+
+.restaurant_navbar img {
+  width: 50px;
+}
+
+.image_2 {
+  width: 100%;
+  object-fit: cover;
+  height: 150px;
+}
+
+.logo_div {
+  display: flex;
+  text-align: center;
+}
+
+.logo_image2 {
+  margin-top: 245px;
+  background-color: black;
+  width: 130px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.background-image {
+  width: 100%;
+  height: 300px;
+  background-image: url(../assets/images/food.jpg);
+  background-size: cover;
+}
+
+.complete img {
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+}
